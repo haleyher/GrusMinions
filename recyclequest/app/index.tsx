@@ -53,7 +53,6 @@ const styles = StyleSheet.create({
     shadowOffset: {height: -10, width: 100},
     marginBottom: 25,
     borderRadius: 12,
-    border: "none",
     color: "black",
 
   },
