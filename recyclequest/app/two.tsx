@@ -10,7 +10,7 @@ export default function TabTwoScreen(props: { onPress: any; title?: "Sign In" | 
     <View style={styles.container}>
       <Text style={styles.title}>THIS WILL BE WHERE \n PPL CAN SIGN IN</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <Link href="/three" asChild>
+      <Link href="/home" asChild>
       <Pressable style={styles.button} onPress={onPress}>
       <Text style={styles.text}>{title}</Text>
     </Pressable>
