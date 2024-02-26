@@ -1,12 +1,17 @@
-import { StyleSheet } from 'react-native';
+import { SafeAreaView, StyleSheet } from 'react-native';
 import { Text, View } from '@/components/Themed';
+import PointsSystem from './home-components/PointsSystem';
+import PointsSummary from './home-components/PointsSummary';
+import RecycleQuests from './home-components/RecycleQuests';
+
 
 export default function TabTwoScreen() {
   return (
-    <View style={styles.container}>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <Text style={styles.title}>Home</Text>     
-    </View>
+    <SafeAreaView style={styles.container}>
+      <PointsSystem/>
+      <PointsSummary/>
+      <RecycleQuests/>
+    </SafeAreaView>
   );
 }
 
@@ -16,14 +21,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#EDFFCC',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
+  }
 });
