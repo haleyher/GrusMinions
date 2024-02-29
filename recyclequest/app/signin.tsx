@@ -74,6 +74,7 @@ const styles = StyleSheet.create({
     margin: 12,
     borderWidth: 1,
     padding: 10,
+    borderColor: "#3B5704",
   },
   title: {
     fontSize: 20,
@@ -90,14 +91,11 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 32,
     elevation: 3,
-    backgroundColor: '#1B1F3B',
-    shadowColor: 'darkorange',
-    shadowOffset: {height: -10, width: 100},
+    backgroundColor: '#3B5704',
+    marginVertical: 30,
     marginBottom: 25,
     borderRadius: 12,
-    border: "none",
     color: "black",
-
   },
   text: {
     fontSize: 16,

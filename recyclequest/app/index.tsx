@@ -2,15 +2,12 @@ import { StyleSheet, Pressable, Button} from 'react-native';
 import { Text, View} from '@/components/Themed';
 import { Link } from 'expo-router';
 
-export default function TabOneScreen(props: { onPress: any; title?: "let's gooo" | undefined; }) {
-  const { onPress, title = 'lets gooo' } = props;
+export default function TabOneScreen(props: { onPress: any; title?: "Start" | undefined; }) {
+  const { onPress, title = 'Start' } = props;
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Recycle Quest</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      
-      
-      <Link href="/two" asChild>
+      <Text style={styles.title}>Recycle Quest</Text>      
+      <Link href="/signin" asChild>
       <Pressable style={styles.button} onPress={onPress}>
       <Text style={styles.text}>{title}</Text>
     </Pressable>
@@ -30,6 +27,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 20,
     fontWeight: 'bold',
+    marginBottom: 25,
   },
   separator: {
     marginVertical: 30,
@@ -42,9 +40,8 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 32,
     elevation: 3,
-    backgroundColor: '#1B1F3B',
-    shadowColor: 'darkorange',
-    shadowOffset: {height: -10, width: 100},
+    backgroundColor: '#3B5704',
+    marginVertical: 30,
     marginBottom: 25,
     borderRadius: 12,
     color: "black",
