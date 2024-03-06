@@ -1,11 +1,15 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Animated } from 'react-native';
 import { Text, View } from '@/components/Themed';
+import * as Progress from "react-native-progress";
 
 export default function TabTwoScreen() {
   return (
     <View style={styles.container}>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <Text style={styles.title}>Home</Text>     
+      <Text style={styles.title}>Rank</Text>
+        <View style = {styles.progressbar}>
+          <Progress.Bar progress={0.3} width={300} color={"#3B5704"} unfilledColor={"81B622"}/>
+        </View>
     </View>
   );
 }
@@ -26,4 +30,10 @@ const styles = StyleSheet.create({
     height: 1,
     width: '80%',
   },
+  progressbar: {
+    height: 50,
+    width: "100%",
+    alignItems: "center",
+    backgroundColor: "#EDFFCC"
+  }
 });
