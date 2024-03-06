@@ -6,6 +6,11 @@ export default function TabTwoScreen() {
   return (
     <View style={styles.container}>
 
+      <View style={styles.topbar}>
+        <View style={styles.topbarlineleft} lightColor="#3B5704" darkColor="#3B5704" />
+        {/* <Image style={styles.topbarlogo} source={require('../recyclequestlogo.png')}> */}
+        <View style={styles.topbarlineright} lightColor="#3B5704" darkColor="#3B5704" />
+      </View>
 
       <Text style={styles.title}>Rank</Text>
       <Text style={styles.pointcount}>250 Points</Text>
@@ -90,4 +95,26 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#EDFFCC"
   },
+  topbar: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    paddingTop: 20,
+  },
+  topbarlineleft:{
+    height: 2,
+    width: '40%',
+    alignItems: 'center',
+    paddingRight: 10,
+  },
+  topbarlineright:{
+    height: 2,
+    width: '40%',
+    alignItems: 'center',
+    paddingLeft: 10,
+  },
+  topbarlogo:{
+    width: "50%",
+    height: "50%",
+  }
 });

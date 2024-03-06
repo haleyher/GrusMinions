@@ -1,7 +1,7 @@
 import React from 'react';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Link, Tabs } from 'expo-router';
-import { Pressable } from 'react-native';
+import { Pressable, Image } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 
 import Colors from '@/constants/Colors';
@@ -69,6 +69,7 @@ export default function TabLayout() {
               </Pressable>
             </Link>
           ),
+
         }}
       />
 
