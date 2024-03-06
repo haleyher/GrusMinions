@@ -30,6 +30,9 @@ const styles = StyleSheet.create({
     marginVertical: 30,
     height: 1,
     width: '80%',
+    borderStyle: 'dotted',
+    borderWidth: 1,
+    borderRadius: 1,
   },
   progressbar: {
     height: 50,
