@@ -5,11 +5,12 @@ import * as Progress from "react-native-progress";
 export default function TabTwoScreen() {
   return (
     <View style={styles.container}>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <Text style={styles.title}>Rank</Text>
         <View style = {styles.progressbar}>
-          <Progress.Bar progress={0.3} width={300} color={"#3B5704"} unfilledColor={"81B622"}/>
+          <Progress.Bar progress={0.3} width={300} color={"#3B5704"} unfilledColor={"#81B622"}/>
         </View>
+        <View style={styles.separator} lightColor="#3B5704" darkColor="#3B5704" />
+
     </View>
   );
 }
