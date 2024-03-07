@@ -1,10 +1,10 @@
-import { StyleSheet, Animated } from 'react-native';
+import { StyleSheet, Animated, ScrollView} from 'react-native';
 import { Text, View } from '@/components/Themed';
 import * as Progress from "react-native-progress";
 
 export default function TabTwoScreen() {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
 
       <View style={styles.topbar}>
         <View style={styles.topbarlineleft} lightColor="#3B5704" darkColor="#3B5704" />
@@ -13,6 +13,7 @@ export default function TabTwoScreen() {
       </View>
 
       <Text style={styles.title}>Rank</Text>
+
       <Text style={styles.pointcount}>250 Points</Text>
 
         <View style = {styles.progressbar}>
@@ -42,7 +43,7 @@ export default function TabTwoScreen() {
 
 
 
-    </View>
+    </ScrollView>
   );
 }
 
