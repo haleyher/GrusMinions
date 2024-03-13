@@ -69,7 +69,7 @@ if (photo) {
     <View style={styles.container}>
       <Camera style={styles.container} ref={cameraRef}>
         <View style={styles.buttonContainer}>
-          <Button title = "Take Pic" onPress={takePic} />
+          <Button title = "Take Pic" color = "#3B5704" onPress={takePic} />
         </View>
 
       </Camera>
@@ -100,6 +100,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignSelf: 'flex-end',
     margin: 140,
+    borderRadius: 40,
   },
   preview: {
     alignSelf: 'stretch',
