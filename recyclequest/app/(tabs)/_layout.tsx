@@ -74,9 +74,9 @@ export default function TabLayout() {
       />
 
 <Tabs.Screen
-        name="progress"
+        name="leaderboard"
         options={{
-          title: 'Progress',
+          title: 'Leaderboard',
           tabBarIcon: ({ color }) => <AntDesign name="barschart" size={24} color={color} />,
           headerRight: () => (
             <Link href="/modal" asChild>
