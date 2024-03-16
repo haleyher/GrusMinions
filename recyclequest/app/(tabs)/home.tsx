@@ -1,4 +1,4 @@
-import { StyleSheet, Animated, ScrollView} from 'react-native';
+import { Image, StyleSheet, Animated, ScrollView} from 'react-native';
 import { Text, View } from '@/components/Themed';
 import * as Progress from "react-native-progress";
 
@@ -8,21 +8,23 @@ export default function TabTwoScreen() {
 
       <View style={styles.topbar}>
         <View style={styles.topbarlineleft} lightColor="#3B5704" darkColor="#3B5704" />
-        {/* <Image style={styles.topbarlogo} source={require('../recyclequestlogo.png')}> */}
+        <Image style={styles.topbarlogo} source={require('../../assets/images/recyclequestlogo.png')}></Image>
         <View style={styles.topbarlineright} lightColor="#3B5704" darkColor="#3B5704" />
       </View>
 
-      <Text style={styles.title}>Rank</Text>
+      <View style={styles.rank}>
+        <Text style={styles.title}>Rank</Text>
+        <Text style={styles.pointcount}>250 Points</Text>
 
-      <Text style={styles.pointcount}>250 Points</Text>
-
-        <View style = {styles.progressbar}>
-          <Progress.Bar progress={0.33} height={13} width={300} color={"#3B5704"} unfilledColor={"#81B622"}/>
-        </View>
+          <View style = {styles.progressbar}>
+            <Progress.Bar progress={0.33} height={13} width={300} color={"#3B5704"} unfilledColor={"#81B622"}/>
+          </View>
+      </View>
 
       <View style={styles.separator} lightColor="#3B5704" darkColor="#3B5704" />
 
       <Text style={styles.title}>Points Summary</Text>
+      <View style={styles.pointssummary}/>
 
       <View style={styles.separator} lightColor="#3B5704" darkColor="#3B5704" />
 
@@ -50,6 +52,7 @@ export default function TabTwoScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    display: 'flex',
     flexDirection: "column",
     backgroundColor: '#EDFFCC',
   },
@@ -57,6 +60,9 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: 'bold',
     paddingLeft: 50,
+  },
+  rank: {
+    marginTop: -10
   },
   pointcount:{
     fontSize: 20,
@@ -99,23 +105,27 @@ const styles = StyleSheet.create({
   topbar: {
     flex: 1,
     flexDirection: "row",
-    justifyContent: "space-between",
     paddingTop: 20,
+    justifyContent: 'center'
   },
   topbarlineleft:{
     height: 2,
     width: '40%',
     alignItems: 'center',
-    paddingRight: 10,
+    marginTop: 20
   },
   topbarlineright:{
     height: 2,
     width: '40%',
     alignItems: 'center',
-    paddingLeft: 10,
+    marginTop: 20
   },
   topbarlogo:{
-    width: "50%",
-    height: "50%",
+    width: 100,
+    height: 100,
+    marginTop: -30,
+  },
+  pointssummary:{
+    marginVertical: 60
   }
 });
